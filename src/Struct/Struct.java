@@ -100,8 +100,11 @@ public class Struct {
             int countTemp = (int) (this.atomsCollection.size() * concentrationGe); // вычисляем количество атомов Ge
             //если нужно еще задать количество атомов Ge больш0
             while (countTemp > 0) {
+                //Выбираем случайный атом
                 int Temp = Math.abs(random.nextInt()) % atomsCollection.size();
+                //проверяем если он не является атомом Ge
                 if (atomsCollection.get(Temp).getAtomType() != AtomType.atomType.Ge.ordinal()) {
+                    //то делаем его атомом Ge
                     atomsCollection.get(Temp).setAtomType(AtomType.atomType.Ge.ordinal());
                     countTemp--;
                 }

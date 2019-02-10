@@ -1,6 +1,6 @@
 package Struct;
 
-public class Distribution {
+public final class Distribution {
     /**
      * Перечисление типов атомов
      */
