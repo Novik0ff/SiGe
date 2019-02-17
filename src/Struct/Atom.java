@@ -1,5 +1,7 @@
 package Struct;
 
+import java.util.ArrayList;
+
 /**
  * @author Novikov 2019
  * Класс для описания объекта - атом
@@ -9,6 +11,11 @@ public class Atom {
     private double x, y, z;
     //тип атома
     private int type;
+    //ближайшие соседи
+    private ArrayList<Integer> neighbourhood = new ArrayList<>();
+    //вторые соседи
+    private ArrayList<Integer> secondNeighbourhood = new ArrayList<>();
+
 
     /**
      * конструктор без параметров
@@ -132,4 +139,136 @@ public class Atom {
                 (this.y - a.y) * (this.y - a.y) +
                 (this.z - a.z) * (this.z - a.z));
     }
+
+    /**
+     * Функция для очистки номеров соседей- атомов
+     *
+     * @return true при успешной очистке
+     */
+    public boolean clearNeighbourhood() {
+        try {
+            this.neighbourhood.clear();
+            return true;
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+            System.out.println("Ошибка при сбросе атомов соседей");
+            return false;
+        }
+    }
+
+    /**
+     * Функция для очистки номеров вторых соседей атомов
+     *
+     * @return true при успешной очистке
+     */
+    public boolean clearSecondNeighbourhood() {
+        try {
+            this.secondNeighbourhood.clear();
+            return true;
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+            System.out.println("Ошибка при сбросе атомов соседей");
+            return false;
+        }
+    }
+
+    /**
+     * Функция для добавления атома- соседа
+     *
+     * @param index номер атома в структуре
+     * @return true в случае успешного добавления атома
+     */
+    public boolean setNeighbourhood(int index) {
+        return setNeighbourhoods(neighbourhood, index);
+    }
+
+    /**
+     * Функция для получения количества атомов соседей
+     *
+     * @return количество атомов соседей
+     */
+    public int getCountneighbourhood() {
+        return neighbourhood.size();
+    }
+
+    /**
+     * Функция для получения количества вторых соседей
+     *
+     * @return количество вторых соседей
+     */
+    public int getCountSecondNeighbourhood() {
+        return secondNeighbourhood.size();
+    }
+
+    /**
+     * Функция для получения атома - соседа по индексу от 0-3 (атомы Si, Ge)
+     *
+     * @param index номер соседа атома от 0 до 3
+     * @return номер атома в структуре
+     */
+    public int getNeighbourhood(int index) {
+        return neighbourhood.get(index);
+    }
+
+    /**
+     * Функция для получения вторый соседей атома по индексу
+     *
+     * @param index номер соседа атома
+     * @return номер атома в структуре
+     */
+    public int getSecondNeighbourhood(int index) {
+        return secondNeighbourhood.get(index);
+    }
+
+    /**
+     * Функция для стравнения атомов
+     *
+     * @param a атом для сравнения
+     * @return true в случае полного соответствия атомов
+     */
+    public boolean equals(Atom a) {
+        try {
+            if (this.getAtomType() == a.getAtomType() &&
+                    this.getAtomX() == a.getAtomX() &&
+                    this.getAtomY() == a.getAtomY() &&
+                    this.getAtomZ() == a.getAtomZ()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+            System.out.println("Ошибка при сравнении атомов");
+            return false;
+        }
+    }
+
+    /**
+     * Функция для добавдения вторых атомов соседей
+     *
+     * @param index номер атома в структуре
+     * @return true в случае успешного добавления атома
+     */
+    public boolean setSecondNeighbourhood(int index) {
+        return setNeighbourhoods(secondNeighbourhood, index);
+    }
+
+    /**
+     * Функиця для добавления атома в коллекцию
+     *
+     * @param neighbourhoods имя коллекции в которую нужно добавить атом
+     * @param index          номер атома на добавление
+     * @return
+     */
+    private boolean setNeighbourhoods(ArrayList<Integer> neighbourhoods, int index) {
+        try {
+            neighbourhoods.add(index);
+            return true;
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+            System.out.println("Ошибка при задании атома соседа");
+            return false;
+        }
+    }
+
 }

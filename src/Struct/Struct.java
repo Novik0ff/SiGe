@@ -4,7 +4,11 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Struct {
-    private ArrayList<Atom> atomsCollection;
+    private ArrayList<Atom> atomsCollection; // коллекция атомов в структуре
+    private double paramCell; // параметр решетки
+    private int distribution; // тип распределения атомов в решетке
+    private int countGe; // количество атомов Ge
+    private int countSi; // количество атомов Si
 
     /**
      * Функция для создания структуры кристалла в форме куба
@@ -15,6 +19,7 @@ public class Struct {
      */
     public boolean сreateCubicStructure(int countCells, double paramCell) {
         try {
+            this.paramCell = paramCell;// задаем параметр решетки
             this.atomsCollection = new ArrayList<Atom>();
             for (int i = 0; i < countCells; i++) {
                 for (int j = 0; j < countCells; j++) {
@@ -65,7 +70,9 @@ public class Struct {
             try {
                 //если распределение рандомное
                 if (distribution == Distribution.distribution.Random.ordinal()) {
+                    this.distribution = Distribution.distribution.Random.ordinal();//рандомное распределение типов атомов в структуре
                     if (setRandomDistribution(concentrationGe)) {
+                        System.out.println("Успешно заданы типы атомов в структуре");
                         return true;
                     } else {
                         System.out.println("\r\nОшибка при задании рандомного распределения атомов в структуре\r\n");
@@ -79,11 +86,12 @@ public class Struct {
                 return true;
             } catch (Exception ex) {
                 System.out.println(ex.getMessage());
+                System.out.println("Ошибка при задании типов атомов в структуре");
                 return false;
             }
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
-            System.out.println("Ошибка при ");
+            System.out.println("Ошибка при задании типов атомов в структуре");
             return false;
         }
     }
@@ -98,6 +106,8 @@ public class Struct {
         try {
             Random random = new Random(); // переменная для рандома
             int countTemp = (int) (this.atomsCollection.size() * concentrationGe); // вычисляем количество атомов Ge
+            this.countGe = countTemp;// задаем количетво атомов Ge в структуре
+            this.countSi = atomsCollection.size() - this.countGe;// задаем количетво атомов Si в структуре
             //если нужно еще задать количество атомов Ge больш0
             while (countTemp > 0) {
                 //Выбираем случайный атом
@@ -133,5 +143,67 @@ public class Struct {
      */
     public Atom getAtom(int index) {
         return atomsCollection.get(index);
+    }
+
+    /**
+     * Функция для поиска соседей атомов
+     *
+     * @param distance радиус для поиска соседей
+     * @return
+     */
+    public boolean setAtomsNeighbourhood(double distance) {
+        try {
+            for (int i = 0; i < atomsCollection.size(); i++) {
+                if (atomsCollection.get(i).clearNeighbourhood())/*сбрасываем соседей у каждого атома*/ {
+                    for (int j = 0; j < atomsCollection.size(); j++) {
+                        if (!atomsCollection.get(i).equals(atomsCollection.get(j)) && atomsCollection.get(i).getDistance(atomsCollection.get(j)) < distance)
+                            /*если атомы разные и находятся в указанном радиусе*/ {
+                            atomsCollection.get(i).setNeighbourhood(j);
+                        }
+                    }
+                }
+            }
+            System.out.println("Успешно заданы атомы соседи для каждого атома в структуре");
+            return true;
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+            System.out.println("Сбой при задании атомов соседей для каждого атома в структуре");
+            return false;
+        }
+    }
+
+    /**
+     * Функция для поиска вторых соседей атомов
+     *
+     * @param distance радиус для поиска вторых соседей
+     * @return
+     */
+    public boolean setAtomsSecondNeighbourhood(double distance) {
+        try {
+            for (int i = 0; i < atomsCollection.size(); i++) {
+                if (atomsCollection.get(i).clearSecondNeighbourhood())/*сбрасываем вторых соседей у каждого атома*/ {
+                    for (int j = 0; j < atomsCollection.size(); j++) {
+                        if (!atomsCollection.get(i).equals(atomsCollection.get(j))
+                                && atomsCollection.get(i).getDistance(atomsCollection.get(j)) < distance
+                                && atomsCollection.get(i).getCountSecondNeighbourhood() < 50)
+                            /*если атомы разные и находятся в указанном радиусе и меньше 50 атомов*/ {
+                            atomsCollection.get(i).setSecondNeighbourhood(j);
+                        }
+                    }
+                }
+            }
+            System.out.println("Успешно заданы вторые соседи для каждого атома в структуре");
+            return true;
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+            System.out.println("Сбой при задании вторых соседей для каждого атома в структуре");
+            return false;
+        }
+    }
+    public String getStructInfo(){
+        return "@paramCell - " + this.paramCell + "\r\n"
+                + "@distribution - " + Distribution.getTypeAtom(this.distribution)+"\r\n"+
+                "@countGe - "+ countGe + "\r\n"
+                + "@countSi - " + countSi;
     }
 }
