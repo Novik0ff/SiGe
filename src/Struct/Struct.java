@@ -1,7 +1,6 @@
 package Struct;
 
-import java.util.ArrayList;
-import java.util.Random;
+import java.util.*;
 
 public class Struct {
     private ArrayList<Atom> atomsCollection; // коллекция атомов в структуре
@@ -9,6 +8,7 @@ public class Struct {
     private int distribution; // тип распределения атомов в решетке
     private int countGe; // количество атомов Ge
     private int countSi; // количество атомов Si
+    private double maxX, maxY, maxZ; //максимальные координаты X,Y,Z
 
     /**
      * Функция для создания структуры кристалла в форме куба
@@ -21,6 +21,11 @@ public class Struct {
         try {
             this.paramCell = paramCell;// задаем параметр решетки
             this.atomsCollection = new ArrayList<Atom>();
+            //определяем максимальные координаты
+            maxX = 0.75 * paramCell + (countCells - 1) * paramCell;
+            maxY = 0.75 * paramCell + (countCells - 1) * paramCell;
+            maxZ = 0.75 * paramCell + (countCells - 1) * paramCell;
+
             for (int i = 0; i < countCells; i++) {
                 for (int j = 0; j < countCells; j++) {
                     for (int k = 0; k < countCells; k++) {
@@ -200,10 +205,41 @@ public class Struct {
             return false;
         }
     }
-    public String getStructInfo(){
-        return "@paramCell - " + this.paramCell + "\r\n"
-                + "@distribution - " + Distribution.getTypeAtom(this.distribution)+"\r\n"+
-                "@countGe - "+ countGe + "\r\n"
-                + "@countSi - " + countSi;
+
+    public String getStructInfo() {
+        return "\r\nStruct Info \r\n@paramCell - " + this.paramCell + "\r\n"
+                + "@distribution - " + Distribution.getTypeAtom(this.distribution) + "\r\n" +
+                "@countGe - " + countGe + "\r\n"
+                + "@countSi - " + countSi + "\r\n";
+    }
+
+    /**
+     * Функция для получения max координаты X
+     * @return max X
+     */
+    public double getMaxX(){
+        return maxX;
+    }
+    /**
+     * Функция для получения max координаты Y
+     * @return max Y
+     */
+    public double getMaxY(){
+        return maxY;
+    }
+    /**
+     * Функция для получения max координаты Z
+     * @return max Z
+     */
+    public double getMaxZ(){
+        return maxZ;
+    }
+
+    /**
+     * Функция возвращает параметр решетки
+     * @return парамент решетки
+     */
+    public double getParamCell(){
+        return this.paramCell;
     }
 }

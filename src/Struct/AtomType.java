@@ -5,7 +5,7 @@ public final class AtomType {
      * Перечисление типов атомов
      */
     public enum atomType {
-        Si, Ge
+        Ge, Si
     }
 
     /**

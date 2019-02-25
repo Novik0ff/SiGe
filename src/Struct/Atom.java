@@ -115,7 +115,7 @@ public class Atom {
      *
      * @return type - значение типа атома type
      */
-    public double getAtomType() {
+    public int getAtomType() {
         return this.type;
     }
 
@@ -133,11 +133,25 @@ public class Atom {
      * Функция для расчета расстояния между атомами
      *
      * @param a - второй атом для расчета расстояния
+     * @return расстояние
      */
     public double getDistance(Atom a) {
         return Math.sqrt((this.x - a.x) * (this.x - a.x) +
                 (this.y - a.y) * (this.y - a.y) +
                 (this.z - a.z) * (this.z - a.z));
+    }
+
+    /**
+     * Функция для расчета расстояния между атомом и точкой в пространстве задаваемой координатами x,y,z
+     * @param x - X координата точки в пространстве
+     * @param y - y координата точки в пространстве
+     * @param z - Z координата точки в пространстве
+     * @return расстояние
+     */
+    public double getDistance(double x,double y,double z) {
+        return Math.sqrt((this.x - x) * (this.x - x) +
+                (this.y - y) * (this.y - y) +
+                (this.z - z) * (this.z - z));
     }
 
     /**
