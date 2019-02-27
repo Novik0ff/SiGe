@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="SiGe:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SiGe_jar</output-path>
+    <root id="archive" name="SiGe.jar">
+      <element id="module-output" name="SiGe" />
+      <element id="extracted-dir" path="D:/Lamba/lambdaj-2.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="D:/Lamba/lambdaj-2.4-with-dependencies.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
