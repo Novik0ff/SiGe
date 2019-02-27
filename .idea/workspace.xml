@@ -7,19 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="049fcbe5-d1e3-49fc-aec2-0f8af7040d56" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/SiGe_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/gluegen_java_src.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jogl_java_src.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SiGe/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Struct/BondType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Permutation/Permutation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SiGe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SiGe.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Energy/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Energy/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Energy/Tersoff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Energy/Tersoff.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Struct/Atom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Struct/Atom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Struct/AtomType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Struct/AtomType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Struct/Struct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Struct/Struct.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,7 +22,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/SiGe$Main.ic" NAME="Main Coverage Results" MODIFIED="1550407636393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/SiGe$Main.ic" NAME="Main Coverage Results" MODIFIED="1551264276466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Main.Main</FILTER>
     </SUITE>
   </component>
@@ -40,23 +31,41 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="50" column="63" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
+            <state relative-caret-position="1666">
+              <caret line="144" selection-start-line="144" selection-end-line="144" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4195#5997#0" />
+                <element signature="docComment;method#saveAsPng#0;class#Main#0" />
+                <element signature="docComment;method#drawScene#0;class#Main#0" />
+                <element signature="method#drawScene#0;class#Main#0" />
+                <element signature="e#6958#6959#0" expanded="true" />
+                <element signature="e#6986#6987#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Distribution.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Struct/Distribution.java">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="16" column="29" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="29" />
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Permutation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Permutation/Permutation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
               <folding>
-                <element signature="docComment;class#distribution#0;class#Distribution#0" />
-                <element signature="docComment;method#getTypeAtom#0;class#Distribution#0" />
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#permutation#0;class#Permutation#0" />
+                <element signature="method#permutation#0;class#Permutation#0" />
+                <element signature="docComment;method#severalPermutation#0;class#Permutation#0" />
+                <element signature="method#severalPermutation#0;class#Permutation#0" />
               </folding>
             </state>
           </provider>
@@ -65,61 +74,40 @@
       <file leaf-file-name="Struct.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Struct/Struct.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2057">
-              <caret line="149" selection-start-line="149" selection-end-line="149" />
+            <state relative-caret-position="459">
+              <caret line="188" column="149" selection-start-line="188" selection-start-column="149" selection-end-line="188" selection-end-column="149" />
               <folding>
                 <element signature="docComment;method#сreateCubicStructure#0;class#Struct#0" />
+                <element signature="method#сreateCubicStructure#0;class#Struct#0" />
                 <element signature="docComment;method#setAtomsTypes#0;class#Struct#0" />
                 <element signature="docComment;method#setRandomDistribution#0;class#Struct#0" />
+                <element signature="method#setRandomDistribution#0;class#Struct#0" />
                 <element signature="docComment;method#getStructCountAtoms#0;class#Struct#0" />
+                <element signature="e#11064#11065#0" expanded="true" />
+                <element signature="e#11114#11115#0" expanded="true" />
                 <element signature="docComment;method#getAtom#0;class#Struct#0" />
-                <element signature="e#6746#6747#0" expanded="true" />
+                <element signature="e#11315#11316#0" expanded="true" />
+                <element signature="e#11364#11365#0" expanded="true" />
                 <element signature="docComment;method#setAtomsNeighbourhood#0;class#Struct#0" />
                 <element signature="method#setAtomsNeighbourhood#0;class#Struct#0" />
+                <element signature="docComment;method#setAtomsSecondNeighbourhood#0;class#Struct#0" />
+                <element signature="method#setAtomsSecondNeighbourhood#0;class#Struct#0" />
+                <element signature="method#getStructInfo#0;class#Struct#0" />
+                <element signature="docComment;method#getMaxX#0;class#Struct#0" />
+                <element signature="e#14332#14333#0" expanded="true" />
+                <element signature="e#14359#14360#0" expanded="true" />
+                <element signature="docComment;method#getMaxY#0;class#Struct#0" />
+                <element signature="e#14480#14481#0" expanded="true" />
+                <element signature="e#14507#14508#0" expanded="true" />
+                <element signature="docComment;method#getMaxZ#0;class#Struct#0" />
+                <element signature="e#14628#14629#0" expanded="true" />
+                <element signature="e#14655#14656#0" expanded="true" />
+                <element signature="docComment;method#getParamCell#0;class#Struct#0" />
+                <element signature="e#14789#14790#0" expanded="true" />
+                <element signature="e#14826#14827#0" expanded="true" />
+                <element signature="docComment;method#calculateCountGeSi#0;class#Struct#0" />
+                <element signature="method#calculateCountGeSi#0;class#Struct#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Energy/Constants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="30" column="30" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tersoff.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Energy/Tersoff.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AtomType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Struct/AtomType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-              <folding>
-                <element signature="docComment;class#atomType#0;class#AtomType#0" />
-                <element signature="docComment;method#getTypeAtom#0;class#AtomType#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BondType.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Struct/BondType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="19" column="39" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -127,8 +115,8 @@
       <file leaf-file-name="Atom.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Struct/Atom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1258">
-              <caret line="150" column="29" selection-start-line="150" selection-start-column="18" selection-end-line="150" selection-end-column="29" />
+            <state relative-caret-position="822">
+              <caret line="120" selection-start-line="120" selection-end-line="120" />
               <folding>
                 <element signature="docComment;method#Atom#0;class#Atom#0" />
                 <element signature="method#Atom#0;class#Atom#0" />
@@ -144,14 +132,17 @@
                 <element signature="docComment;method#getAtomZ#0;class#Atom#0" />
                 <element signature="docComment;method#setAtomType#0;class#Atom#0" />
                 <element signature="docComment;method#getAtomType#0;class#Atom#0" />
-                <element signature="docComment;method#getAtomInfo#0;class#Atom#0" />
-                <element signature="method#getAtomInfo#0;class#Atom#0" />
+                <element signature="docComment;method#getDistance#0;class#Atom#0" />
+                <element signature="method#getDistance#0;class#Atom#0" />
                 <element signature="docComment;method#clearNeighbourhood#0;class#Atom#0" />
                 <element signature="method#clearNeighbourhood#0;class#Atom#0" />
+                <element signature="docComment;method#clearSecondNeighbourhood#0;class#Atom#0" />
+                <element signature="method#clearSecondNeighbourhood#0;class#Atom#0" />
                 <element signature="docComment;method#setNeighbourhood#0;class#Atom#0" />
-                <element signature="docComment;method#getCountneighbourhood#0;class#Atom#0" />
+                <element signature="docComment;method#getCountNeighbourhood#0;class#Atom#0" />
                 <element signature="docComment;method#getCountSecondNeighbourhood#0;class#Atom#0" />
                 <element signature="docComment;method#getNeighbourhood#0;class#Atom#0" />
+                <element signature="docComment;method#getSecondNeighbourhood#0;class#Atom#0" />
                 <element signature="docComment;method#equals#0;class#Atom#0" />
                 <element signature="method#equals#0;class#Atom#0" />
                 <element signature="docComment;method#setSecondNeighbourhood#0;class#Atom#0" />
@@ -163,18 +154,30 @@
         </entry>
       </file>
       <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Struct/Constants.java">
+        <entry file="file://$PROJECT_DIR$/src/Energy/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+            <state relative-caret-position="510">
+              <caret line="30" column="30" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tersoff.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Energy/Tersoff.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="674">
+              <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="sample.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/sample.fxml">
-          <provider selected="true" editor-type-id="text-editor" />
           <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -203,10 +206,13 @@
         <option value="$PROJECT_DIR$/src/Energy/Constants.java" />
         <option value="$PROJECT_DIR$/src/Main/OneTriangle.java" />
         <option value="$PROJECT_DIR$/src/Struct/BondType.java" />
-        <option value="$PROJECT_DIR$/src/Struct/Atom.java" />
-        <option value="$PROJECT_DIR$/src/Struct/Struct.java" />
         <option value="$PROJECT_DIR$/src/Struct/AtomType.java" />
         <option value="$PROJECT_DIR$/src/Energy/Tersoff.java" />
+        <option value="$PROJECT_DIR$/src/Segregation/Segregation.java" />
+        <option value="$PROJECT_DIR$/src/Permutation/Segregation.java" />
+        <option value="$PROJECT_DIR$/src/Struct/Struct.java" />
+        <option value="$PROJECT_DIR$/src/Struct/Atom.java" />
+        <option value="$PROJECT_DIR$/src/Permutation/Permutation.java" />
         <option value="$PROJECT_DIR$/src/Main/Main.java" />
       </list>
     </option>
@@ -221,10 +227,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-17" />
-    <option name="y" value="-14" />
-    <option name="width" value="864" />
-    <option name="height" value="946" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -235,7 +241,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -258,7 +264,19 @@
               <item name="SiGe" type="b2602c69:ProjectViewProjectNode" />
               <item name="SiGe" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SiGe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SiGe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SiGe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SiGe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Permutation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SiGe" type="b2602c69:ProjectViewProjectNode" />
@@ -270,7 +288,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -377,15 +395,18 @@
       <workItem from="1550937249436" duration="2101000" />
       <workItem from="1550987348445" duration="11489000" />
       <workItem from="1551081523371" duration="5892000" />
+      <workItem from="1551108085035" duration="5039000" />
+      <workItem from="1551149918211" duration="4568000" />
+      <workItem from="1551194500816" duration="8151000" />
+      <workItem from="1551250738181" duration="18085000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87506000" />
+    <option name="totallyTimeSpent" value="123349000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -397,11 +418,11 @@
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32943678" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30712008" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.19872476" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13854167" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2078125" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -409,8 +430,8 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.424017" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3296875" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3296875" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -436,45 +457,21 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="45" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Permutation/Permutation.java</url>
+          <line>46</line>
+          <properties />
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="55" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Struct/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/sample.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Energy/Tersoff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Struct/Distribution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Struct/Struct.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -511,8 +508,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/sample.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Struct/Atom.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -527,6 +524,12 @@
           <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4195#5997#0" />
+            <element signature="docComment;method#saveAsPng#0;class#Main#0" />
+            <element signature="docComment;method#drawScene#0;class#Main#0" />
+            <element signature="method#drawScene#0;class#Main#0" />
+            <element signature="e#6958#6959#0" expanded="true" />
+            <element signature="e#6986#6987#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -577,8 +580,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/sample.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Energy/Tersoff.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -593,6 +596,12 @@
           <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4195#5997#0" />
+            <element signature="docComment;method#saveAsPng#0;class#Main#0" />
+            <element signature="docComment;method#drawScene#0;class#Main#0" />
+            <element signature="method#drawScene#0;class#Main#0" />
+            <element signature="e#6958#6959#0" expanded="true" />
+            <element signature="e#6986#6987#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -636,18 +645,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/sample.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/SiGe.iml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Energy/Const.java" />
     <entry file="file://$PROJECT_DIR$/src/Constans.java" />
@@ -680,17 +682,122 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="16" column="29" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Struct/AtomType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
           <folding>
-            <element signature="docComment;class#distribution#0;class#Distribution#0" />
-            <element signature="docComment;method#getTypeAtom#0;class#Distribution#0" />
+            <element signature="docComment;class#atomType#0;class#AtomType#0" />
+            <element signature="docComment;method#getTypeAtom#0;class#AtomType#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Struct/BondType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Struct/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/sample.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Energy/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/jre/lib/rt.jar!/sun/launcher/LauncherHelper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="576" selection-start-line="576" selection-end-line="576" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/com/sun/javafx/application/LauncherImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="916" selection-start-line="916" selection-end-line="916" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Struct/Struct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="188" column="149" selection-start-line="188" selection-start-column="149" selection-end-line="188" selection-end-column="149" />
+          <folding>
+            <element signature="docComment;method#сreateCubicStructure#0;class#Struct#0" />
+            <element signature="method#сreateCubicStructure#0;class#Struct#0" />
+            <element signature="docComment;method#setAtomsTypes#0;class#Struct#0" />
+            <element signature="docComment;method#setRandomDistribution#0;class#Struct#0" />
+            <element signature="method#setRandomDistribution#0;class#Struct#0" />
+            <element signature="docComment;method#getStructCountAtoms#0;class#Struct#0" />
+            <element signature="e#11064#11065#0" expanded="true" />
+            <element signature="e#11114#11115#0" expanded="true" />
+            <element signature="docComment;method#getAtom#0;class#Struct#0" />
+            <element signature="e#11315#11316#0" expanded="true" />
+            <element signature="e#11364#11365#0" expanded="true" />
+            <element signature="docComment;method#setAtomsNeighbourhood#0;class#Struct#0" />
+            <element signature="method#setAtomsNeighbourhood#0;class#Struct#0" />
+            <element signature="docComment;method#setAtomsSecondNeighbourhood#0;class#Struct#0" />
+            <element signature="method#setAtomsSecondNeighbourhood#0;class#Struct#0" />
+            <element signature="method#getStructInfo#0;class#Struct#0" />
+            <element signature="docComment;method#getMaxX#0;class#Struct#0" />
+            <element signature="e#14332#14333#0" expanded="true" />
+            <element signature="e#14359#14360#0" expanded="true" />
+            <element signature="docComment;method#getMaxY#0;class#Struct#0" />
+            <element signature="e#14480#14481#0" expanded="true" />
+            <element signature="e#14507#14508#0" expanded="true" />
+            <element signature="docComment;method#getMaxZ#0;class#Struct#0" />
+            <element signature="e#14628#14629#0" expanded="true" />
+            <element signature="e#14655#14656#0" expanded="true" />
+            <element signature="docComment;method#getParamCell#0;class#Struct#0" />
+            <element signature="e#14789#14790#0" expanded="true" />
+            <element signature="e#14826#14827#0" expanded="true" />
+            <element signature="docComment;method#calculateCountGeSi#0;class#Struct#0" />
+            <element signature="method#calculateCountGeSi#0;class#Struct#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dasd.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Energy/Tersoff.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="674">
+          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Struct/Atom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="150" column="29" selection-start-line="150" selection-start-column="18" selection-end-line="150" selection-end-column="29" />
+        <state relative-caret-position="822">
+          <caret line="120" selection-start-line="120" selection-end-line="120" />
           <folding>
             <element signature="docComment;method#Atom#0;class#Atom#0" />
             <element signature="method#Atom#0;class#Atom#0" />
@@ -706,14 +813,17 @@
             <element signature="docComment;method#getAtomZ#0;class#Atom#0" />
             <element signature="docComment;method#setAtomType#0;class#Atom#0" />
             <element signature="docComment;method#getAtomType#0;class#Atom#0" />
-            <element signature="docComment;method#getAtomInfo#0;class#Atom#0" />
-            <element signature="method#getAtomInfo#0;class#Atom#0" />
+            <element signature="docComment;method#getDistance#0;class#Atom#0" />
+            <element signature="method#getDistance#0;class#Atom#0" />
             <element signature="docComment;method#clearNeighbourhood#0;class#Atom#0" />
             <element signature="method#clearNeighbourhood#0;class#Atom#0" />
+            <element signature="docComment;method#clearSecondNeighbourhood#0;class#Atom#0" />
+            <element signature="method#clearSecondNeighbourhood#0;class#Atom#0" />
             <element signature="docComment;method#setNeighbourhood#0;class#Atom#0" />
-            <element signature="docComment;method#getCountneighbourhood#0;class#Atom#0" />
+            <element signature="docComment;method#getCountNeighbourhood#0;class#Atom#0" />
             <element signature="docComment;method#getCountSecondNeighbourhood#0;class#Atom#0" />
             <element signature="docComment;method#getNeighbourhood#0;class#Atom#0" />
+            <element signature="docComment;method#getSecondNeighbourhood#0;class#Atom#0" />
             <element signature="docComment;method#equals#0;class#Atom#0" />
             <element signature="method#equals#0;class#Atom#0" />
             <element signature="docComment;method#setSecondNeighbourhood#0;class#Atom#0" />
@@ -723,75 +833,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Struct/Struct.java">
+    <entry file="file://$PROJECT_DIR$/src/Permutation/Permutation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2057">
-          <caret line="149" selection-start-line="149" selection-end-line="149" />
-          <folding>
-            <element signature="docComment;method#сreateCubicStructure#0;class#Struct#0" />
-            <element signature="docComment;method#setAtomsTypes#0;class#Struct#0" />
-            <element signature="docComment;method#setRandomDistribution#0;class#Struct#0" />
-            <element signature="docComment;method#getStructCountAtoms#0;class#Struct#0" />
-            <element signature="docComment;method#getAtom#0;class#Struct#0" />
-            <element signature="e#6746#6747#0" expanded="true" />
-            <element signature="docComment;method#setAtomsNeighbourhood#0;class#Struct#0" />
-            <element signature="method#setAtomsNeighbourhood#0;class#Struct#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Struct/AtomType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding>
-            <element signature="docComment;class#atomType#0;class#AtomType#0" />
-            <element signature="docComment;method#getTypeAtom#0;class#AtomType#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Energy/Tersoff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        <state relative-caret-position="170">
+          <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;method#permutation#0;class#Permutation#0" />
+            <element signature="method#permutation#0;class#Permutation#0" />
+            <element signature="docComment;method#severalPermutation#0;class#Permutation#0" />
+            <element signature="method#severalPermutation#0;class#Permutation#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Energy/Constants.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/com/sun/glass/ui/win/WinApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="30" column="30" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="30" />
+        <state relative-caret-position="203">
+          <caret line="176" selection-start-line="176" selection-end-line="176" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Struct/BondType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Struct/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/sample.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="50" column="63" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
+        <state relative-caret-position="1666">
+          <caret line="144" selection-start-line="144" selection-end-line="144" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4195#5997#0" />
+            <element signature="docComment;method#saveAsPng#0;class#Main#0" />
+            <element signature="docComment;method#drawScene#0;class#Main#0" />
+            <element signature="method#drawScene#0;class#Main#0" />
+            <element signature="e#6958#6959#0" expanded="true" />
+            <element signature="e#6986#6987#0" expanded="true" />
           </folding>
         </state>
       </provider>

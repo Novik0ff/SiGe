@@ -120,16 +120,6 @@ public class Atom {
     }
 
     /**
-     * Функция для вывода значениЙ атома
-     */
-    public String getAtomInfo() {
-        return "@param x - " + this.x + "\r\n" +
-                "@param y - " + this.y + "\r\n" +
-                "@param z - " + this.z + "\r\n" +
-                "@param type - " + AtomType.getTypeAtom(this.type) + "\r\n";
-    }
-
-    /**
      * Функция для расчета расстояния между атомами
      *
      * @param a - второй атом для расчета расстояния
@@ -139,19 +129,6 @@ public class Atom {
         return Math.sqrt((this.x - a.x) * (this.x - a.x) +
                 (this.y - a.y) * (this.y - a.y) +
                 (this.z - a.z) * (this.z - a.z));
-    }
-
-    /**
-     * Функция для расчета расстояния между атомом и точкой в пространстве задаваемой координатами x,y,z
-     * @param x - X координата точки в пространстве
-     * @param y - y координата точки в пространстве
-     * @param z - Z координата точки в пространстве
-     * @return расстояние
-     */
-    public double getDistance(double x,double y,double z) {
-        return Math.sqrt((this.x - x) * (this.x - x) +
-                (this.y - y) * (this.y - y) +
-                (this.z - z) * (this.z - z));
     }
 
     /**
@@ -201,7 +178,7 @@ public class Atom {
      *
      * @return количество атомов соседей
      */
-    public int getCountneighbourhood() {
+    public int getCountNeighbourhood() {
         return neighbourhood.size();
     }
 
@@ -227,8 +204,8 @@ public class Atom {
     /**
      * Функция для получения вторый соседей атома по индексу
      *
-     * @param index номер соседа атома
-     * @return номер атома в структуре
+     * @param index - номер соседа атома
+     * @return - номер атома в структуре
      */
     public int getSecondNeighbourhood(int index) {
         return secondNeighbourhood.get(index);

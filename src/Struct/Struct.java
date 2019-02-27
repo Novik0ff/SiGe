@@ -9,6 +9,7 @@ public class Struct {
     private int countGe; // количество атомов Ge
     private int countSi; // количество атомов Si
     private double maxX, maxY, maxZ; //максимальные координаты X,Y,Z
+    private int countGroup; //количество атомов в группе в явлении сегрегации
 
     /**
      * Функция для создания структуры кристалла в форме куба
@@ -75,7 +76,8 @@ public class Struct {
             try {
                 //если распределение рандомное
                 if (distribution == Distribution.distribution.Random.ordinal()) {
-                    this.distribution = Distribution.distribution.Random.ordinal();//рандомное распределение типов атомов в структуре
+                    //рандомное распределение типов атомов в структуре
+                    this.distribution = Distribution.distribution.Random.ordinal();
                     if (setRandomDistribution(concentrationGe)) {
                         System.out.println("Успешно заданы типы атомов в структуре");
                         return true;
@@ -86,7 +88,23 @@ public class Struct {
                 }
                 //если явления сегрегации
                 if (distribution == Distribution.distribution.Segregation.ordinal()) {
-
+                    //явление сегрегации в структуре
+                    this.distribution = Distribution.distribution.Segregation.ordinal();
+                    try {
+                        this.setAtomsNeighbourhood(paramCell / 2);
+                        System.out.println("Задайте количество атомов в группе");
+                        this.countGroup = new Scanner(System.in).nextInt();
+                        if (setSegregationDistribution(concentrationGe, countGroup)) {
+                            System.out.println("Успешно заданы типы атомов в структуре");
+                            return true;
+                        } else {
+                            System.out.println("\r\nОшибка при задании распределения атомов в структуре с явлением сегрегации\r\n");
+                            return false;
+                        }
+                    } catch (Exception ex) {
+                        System.out.println("\r\nОшибка при задании распределения атомов в структуре с явлением сегрегации\r\n");
+                        return false;
+                    }
                 }
                 return true;
             } catch (Exception ex) {
@@ -98,6 +116,81 @@ public class Struct {
             System.out.println(ex.getMessage());
             System.out.println("Ошибка при задании типов атомов в структуре");
             return false;
+        }
+    }
+
+    /**
+     * Функция задает типы атомов в структуре с явлением сегрегации
+     *
+     * @param concentrationGe концентрация атомов Ge в структуре
+     * @param countGroup      количетсво атомов в группе при моделированиии явления сегрегации
+     * @return true если все прошло успешно
+     */
+
+    private boolean setSegregationDistribution(double concentrationGe, int countGroup) {
+        if (atomsCollection.size() < countGroup) {
+            return false;
+        } else {
+            //задаем все атомы в структуре атомами Si
+            for (int i = 0; i < atomsCollection.size(); i++) {
+                atomsCollection.get(i).setAtomType(AtomType.atomType.Si.ordinal());
+            }
+            //расчитываем количество узлов где в структуре будут скопления атомов Ge
+            int nodes = (int) (atomsCollection.size() * concentrationGe / countGroup);
+            //задаем группы скоплений атомов
+            for (int i = 0; i < nodes; i++) {
+                Segregation(countGroup);
+            }
+            //если атомов Ge задали меньшее количество
+            if ((int) (atomsCollection.size() * concentrationGe) > nodes * countGroup) {
+                Segregation((int) (atomsCollection.size() * concentrationGe) - nodes * countGroup);
+            }
+
+            return true;
+        }
+    }
+
+    /**
+     * Функция задает скопления атомов Ge в указанном количестве
+     * @param countGroup количество атомов в группе
+     */
+    private void Segregation(int countGroup) {
+        int temp = countGroup;
+        Random rnd = new Random();
+        while (temp > 0) {
+            //если случайный атом - Si
+            int rndValue = Math.abs(rnd.nextInt() % atomsCollection.size());
+            if (atomsCollection.get(rndValue).getAtomType() == AtomType.atomType.Si.ordinal()) {
+                //делаем найденый атом - атомом Ge
+                atomsCollection.get(rndValue).setAtomType(AtomType.atomType.Ge.ordinal());
+                temp--;
+                //создаем коллекцию куда будем записываать атомы группы
+                ArrayList<Integer> groupAtoms = new ArrayList<>();
+                //добавили наш найденный атом - узел группы
+                groupAtoms.add(rndValue);
+                while (temp > 0) {
+                    //выбираем случайный атом в группе
+                    int tempAtom = Math.abs(rnd.nextInt() % groupAtoms.size());
+                    //находим его случайного соседа
+                    int tempNeighbourhood = Math.abs(rnd.nextInt() % atomsCollection.get(groupAtoms.get(tempAtom)).getCountNeighbourhood());
+                    //проверяем если он атом Si, то меняем его на атом Ge
+                    if (atomsCollection.get(atomsCollection.get(groupAtoms.get(tempAtom)).getNeighbourhood(tempNeighbourhood)).getAtomType() == AtomType.atomType.Si.ordinal()) {
+                        atomsCollection.get(atomsCollection.get(groupAtoms.get(tempAtom)).getNeighbourhood(tempNeighbourhood)).setAtomType(AtomType.atomType.Ge.ordinal());
+                        temp--;
+                    }
+                    boolean check = true;
+                    //проверка на уникальность атома
+                    for (int i = 0; i < groupAtoms.size(); i++) {
+                        if(groupAtoms.get(i) == atomsCollection.get(groupAtoms.get(tempAtom)).getNeighbourhood(tempNeighbourhood)){
+                            check = false;
+                        }
+                    }
+                    if(check){
+                        //также добавляем его в коллекцию, чтобы по нему тоже велся поиск новых атомов, при условии что такого этома в группе не было
+                        groupAtoms.add(atomsCollection.get(groupAtoms.get(tempAtom)).getNeighbourhood(tempNeighbourhood));
+                    }
+                }
+            }
         }
     }
 
@@ -215,31 +308,54 @@ public class Struct {
 
     /**
      * Функция для получения max координаты X
+     *
      * @return max X
      */
-    public double getMaxX(){
+    public double getMaxX() {
         return maxX;
     }
+
     /**
      * Функция для получения max координаты Y
+     *
      * @return max Y
      */
-    public double getMaxY(){
+    public double getMaxY() {
         return maxY;
     }
+
     /**
      * Функция для получения max координаты Z
+     *
      * @return max Z
      */
-    public double getMaxZ(){
+    public double getMaxZ() {
         return maxZ;
     }
 
     /**
      * Функция возвращает параметр решетки
+     *
      * @return парамент решетки
      */
-    public double getParamCell(){
+    public double getParamCell() {
         return this.paramCell;
+    }
+
+    /**
+     * Функция для пересчета количества атомом Ge, Si в структуре
+     */
+    public void calculateCountGeSi() {
+        //сбрасываем прежние значения количества атомов в структуре
+        this.countGe = 0;
+        this.countSi = 0;
+        for (int i = 0; i < atomsCollection.size(); i++) {
+            if (atomsCollection.get(i).getAtomType() == AtomType.atomType.Ge.ordinal()) {
+                this.countGe++;
+            }
+            if (atomsCollection.get(i).getAtomType() == AtomType.atomType.Si.ordinal()) {
+                this.countSi++;
+            }
+        }
     }
 }
